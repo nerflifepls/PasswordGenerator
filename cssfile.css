@@ -83,6 +83,7 @@ body{
 
 #inf{
     text-align: center;
+    background-color: var(--clr-primary-300);
     border: var(--clr-primary-900) 2px solid;
     border-radius: 1em;
 }
@@ -96,6 +97,7 @@ body{
 
 #specialCharactersinf{
     display: none;
+    color: var(--clr-gold);
     height: auto;
     font-size: x-large;
 }
