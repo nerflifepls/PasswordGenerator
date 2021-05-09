@@ -1,0 +1,149 @@
+:root{
+    --clr-primary-100: #CAF0F8;
+    --clr-primary-200: #ADE8F4;
+    --clr-primary-300: #90E0EF;
+    --clr-primary-400: #48CAE4;
+    --clr-primary-500: #00B4D8;
+    --clr-primary-600: #0096C7;
+    --clr-primary-700: #0077B6;
+    --clr-primary-800: #023E8A;
+    --clr-primary-900: #03045E;
+
+    --clr-white: white;
+    --clr-gold: gold;
+
+}
+/*------------General stuff-------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--clr-primary-700);
+}
+
+#inputs{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 30%;
+    min-width: 10%;
+    min-width: 300px;
+
+    padding: 4em 1.5em;
+    box-shadow: 0 0 1em 0 var(--clr-primary-100);
+    background-color: var(--clr-primary-800);
+}
+
+#specialCharacters,
+#CAPS{
+    height: 1.3em;
+}
+
+#inputs > * {
+    transition: all 500ms ease;
+    flex: 1 1 100%;
+    text-align: center;
+    overflow: hidden;
+    font-size: xx-large;
+    border: 0;
+    outline: none;
+    text-decoration: none;
+}
+
+/*---------- length input -----------*/
+#maxlength{
+    box-shadow: 0 0 1em 0.1em var(--clr-primary-500);
+    background-color: var(--clr-primary-400);
+}
+
+#maxlength:hover,
+#maxlength:focus{
+    transform: scale(1.05);
+}
+
+#maxlength::placeholder{
+    color: var(--clr-gold);
+}
+
+#maxlength:focus::-webkit-input-placeholder{
+    color: transparent;
+}
+
+#maxlength:placeholder-shown{
+    text-overflow: ellipsis;
+}
+/*----------- Labels output ---------------*/
+
+#inf{
+    text-align: center;
+    border: var(--clr-primary-900) 2px solid;
+    border-radius: 1em;
+}
+#inf:hover{
+    cursor: pointer;
+}
+
+#inf:hover ~ #specialCharactersinf{
+    display: block;
+}
+
+#specialCharactersinf{
+    display: none;
+    height: auto;
+    font-size: x-large;
+}
+
+#inputs label,
+p{
+    color: var(--clr-primary-200)
+}
+
+#inputs #passwordOutput:hover{
+    background-color: var(--clr-primary-900);
+    border-radius: .5em;
+    color: var(--clr-white)
+}
+
+#passwordOutput{
+    overflow-wrap: break-word;
+}
+
+/*--------- Checkboxes -----------*/
+
+#specialCharacters:hover,
+#CAPS:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+/*------- Generate password button ------*/
+
+#inputs button{
+    cursor: pointer;
+    background-color: var(--clr-primary-400);
+    border-radius: 2em;
+    box-shadow: 0 0 1em 0 var(--clr-primary-500);
+}
+
+#inputs button:hover{
+    transform: scale(1.07);
+}
+
+@media (max-width: 1100px){
+    #inputs{
+        max-width: 100%;
+        width: 40%;
+        
+    }
+    #inputs > *{
+        max-height: fit-content;
+    }
+}
