@@ -94,6 +94,9 @@ body{
 #inf:hover ~ #specialCharactersinf{
     display: block;
 }
+#inf:focus ~ #specialCharactersinf{
+    display: block;
+}
 
 #specialCharactersinf{
     display: none;
