@@ -1,7 +1,7 @@
 function generatePassword() {
     var maxL = document.getElementById("maxlength").value
     if (maxL > 100 || maxL <=0){
-        alert("This length is out of room! remember that the length must be between 1 and 100 characters")
+        alert("This length is out of range! remember that the length must be between 1 and 100 characters")
         return -1
     }
 
